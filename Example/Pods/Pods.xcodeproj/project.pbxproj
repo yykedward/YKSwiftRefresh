@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23044FD8290585C31F00D7D5607B7789 /* Pods-YKSwiftRefresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E57E6672E75E6BF4FDF1EC9DD335642 /* Pods-YKSwiftRefresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36A26719AC76074B78E483A193E64956 /* Pods-YKSwiftRefresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F53A17535BC6FABD0652EECE6C41D /* Pods-YKSwiftRefresh_Example-dummy.m */; };
+		56A0995381CC4FFE439624110BAE3594 /* Pods-YKSwiftRefresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C38DC73DBBF88249DF2A8F1F5CEAD03C /* Pods-YKSwiftRefresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B7C6493D43ED55CAED3D559CBBFA7CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6E53E33FF5FE9119996269F24E3FEFD6 /* Pods-YKSwiftRefresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0506835FEA2BD2D9FD419EC10005C83B /* Pods-YKSwiftRefresh_Tests-dummy.m */; };
+		A6C19D2CF522F9252DD53B3BF4763058 /* YKSwiftRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5727A53DF1050A99E1C1E62DD6A1C1F1 /* YKSwiftRefresh-dummy.m */; };
+		BC9901729E0382D69F5DCB5158287BE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CCCE10B2ED874B6A42B75588DF4B041C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A535390C9B6B261AA8E7A9C6112A71 /* ReplaceMe.swift */; };
+		DE628DCE32B204A59E8F1976E02719CF /* YKSwiftRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A4CC9CE163ECCA074C38CF5276E91FD /* YKSwiftRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E007A816A243C4F55D11D06AD72B5972 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7773BBAE06226877FC03A00722BAEBB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58CBCC4D9790CD00EB444A141861683B;
+			remoteInfo = "Pods-YKSwiftRefresh_Example";
+		};
+		CBB5CB8127B8FB2784467E7BDDF869B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59DFDF69196E6580D0BC5AC7CD6EAA4F;
+			remoteInfo = YKSwiftRefresh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00D63E86BC6ADA016A6AAED0C87C530F /* Pods-YKSwiftRefresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YKSwiftRefresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0506835FEA2BD2D9FD419EC10005C83B /* Pods-YKSwiftRefresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YKSwiftRefresh_Tests-dummy.m"; sourceTree = "<group>"; };
+		080A5DCE37D6E600C950CEC54A3B007E /* Pods-YKSwiftRefresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YKSwiftRefresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0A4CC9CE163ECCA074C38CF5276E91FD /* YKSwiftRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YKSwiftRefresh-umbrella.h"; sourceTree = "<group>"; };
+		0CCABF77F71A9480AEC5B1C153F81738 /* YKSwiftRefresh.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YKSwiftRefresh.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0E57E6672E75E6BF4FDF1EC9DD335642 /* Pods-YKSwiftRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YKSwiftRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
+		135D32C9CA6DD73E3D6A418AC1EEC385 /* YKSwiftRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YKSwiftRefresh.framework; path = YKSwiftRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB7DA14319EB856C9BCEF0094CB6DCD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1E89E6134DB7FDEE3F223219B6DB9E6A /* Pods-YKSwiftRefresh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YKSwiftRefresh_Tests.modulemap"; sourceTree = "<group>"; };
+		2440DBE5C8333763660516DC8A8E0325 /* Pods-YKSwiftRefresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YKSwiftRefresh_Example.modulemap"; sourceTree = "<group>"; };
+		309330C73EDA6B6935CA52D24286BD06 /* YKSwiftRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YKSwiftRefresh.debug.xcconfig; sourceTree = "<group>"; };
+		346AF72C10B87297DD0E4D0BC6B8DD7B /* Pods-YKSwiftRefresh_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YKSwiftRefresh_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		34EEB37519AB0988179F637335BA0925 /* Pods-YKSwiftRefresh_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YKSwiftRefresh_Tests-Info.plist"; sourceTree = "<group>"; };
+		393A8A3016BB8BC467951BF66B148044 /* Pods-YKSwiftRefresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YKSwiftRefresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BDE8AFC689F5D8FAFBD72E843DBE762 /* Pods-YKSwiftRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YKSwiftRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4F9E9613AD6D9B906F619FD789A3C653 /* YKSwiftRefresh-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YKSwiftRefresh-Info.plist"; sourceTree = "<group>"; };
+		511684AE9B085E797F23303286CFC21F /* Pods-YKSwiftRefresh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YKSwiftRefresh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		5727A53DF1050A99E1C1E62DD6A1C1F1 /* YKSwiftRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YKSwiftRefresh-dummy.m"; sourceTree = "<group>"; };
+		586C4DDF49B91A37DC1EBFFB8EFA2706 /* Pods-YKSwiftRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YKSwiftRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		60A535390C9B6B261AA8E7A9C6112A71 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = YKSwiftRefresh/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8B58DFDAB1E583EA312524DA72D54731 /* Pods-YKSwiftRefresh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YKSwiftRefresh_Example-frameworks.sh"; sourceTree = "<group>"; };
+		99BFCDD6341C77CF3C8260EC61E47CC8 /* YKSwiftRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YKSwiftRefresh.release.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A06F53A17535BC6FABD0652EECE6C41D /* Pods-YKSwiftRefresh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YKSwiftRefresh_Example-dummy.m"; sourceTree = "<group>"; };
+		C2AEF572E132D7B11F954E3064C5A4DD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C38DC73DBBF88249DF2A8F1F5CEAD03C /* Pods-YKSwiftRefresh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YKSwiftRefresh_Example-umbrella.h"; sourceTree = "<group>"; };
+		C6E9BD94B3B9E110F7DB76F51AD21AF9 /* YKSwiftRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YKSwiftRefresh-prefix.pch"; sourceTree = "<group>"; };
+		EB4C54D87046C3DAF11AF682B0D9D03A /* Pods_YKSwiftRefresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YKSwiftRefresh_Example.framework; path = "Pods-YKSwiftRefresh_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD5AFEB8ED0CDD7444C9BB6E3900906 /* Pods-YKSwiftRefresh_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YKSwiftRefresh_Example-Info.plist"; sourceTree = "<group>"; };
+		EFAB3E6F36B08CCA13AD4EDE152ACD87 /* Pods_YKSwiftRefresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YKSwiftRefresh_Tests.framework; path = "Pods-YKSwiftRefresh_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05FD6631C926E6F4C19553A0D3A14F0 /* Pods-YKSwiftRefresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YKSwiftRefresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FC3D0398B81A60929BA30B76E81815D8 /* YKSwiftRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YKSwiftRefresh.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2DF5CBD20A6EA1D5AC74DDBDDE0DC08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7C6493D43ED55CAED3D559CBBFA7CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C344F86A68E061AEFB4652880AA3B58F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9901729E0382D69F5DCB5158287BE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DFA3B91A6A492C8E6EA1504A59FB05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E007A816A243C4F55D11D06AD72B5972 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D6486634129D8593DA8247873345269 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC3D0398B81A60929BA30B76E81815D8 /* YKSwiftRefresh.modulemap */,
+				5727A53DF1050A99E1C1E62DD6A1C1F1 /* YKSwiftRefresh-dummy.m */,
+				4F9E9613AD6D9B906F619FD789A3C653 /* YKSwiftRefresh-Info.plist */,
+				C6E9BD94B3B9E110F7DB76F51AD21AF9 /* YKSwiftRefresh-prefix.pch */,
+				0A4CC9CE163ECCA074C38CF5276E91FD /* YKSwiftRefresh-umbrella.h */,
+				309330C73EDA6B6935CA52D24286BD06 /* YKSwiftRefresh.debug.xcconfig */,
+				99BFCDD6341C77CF3C8260EC61E47CC8 /* YKSwiftRefresh.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/YKSwiftRefresh";
+			sourceTree = "<group>";
+		};
+		380BA29923CF853980D45272954E23EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB4C54D87046C3DAF11AF682B0D9D03A /* Pods_YKSwiftRefresh_Example.framework */,
+				EFAB3E6F36B08CCA13AD4EDE152ACD87 /* Pods_YKSwiftRefresh_Tests.framework */,
+				135D32C9CA6DD73E3D6A418AC1EEC385 /* YKSwiftRefresh.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4011C04ED0AC786818640A2D0515885A /* YKSwiftRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				60A535390C9B6B261AA8E7A9C6112A71 /* ReplaceMe.swift */,
+				EC92245DB8B1A9FC34592D21A4AB9EB4 /* Pod */,
+				0D6486634129D8593DA8247873345269 /* Support Files */,
+			);
+			name = YKSwiftRefresh;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		69C4DC43F3EC9FDF0B5269E8CD29785E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4011C04ED0AC786818640A2D0515885A /* YKSwiftRefresh */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A2EBC17D386CCED3765655AEB4834965 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABE32991D6BD398ADC42BAC5A7C2D9 /* Pods-YKSwiftRefresh_Example */,
+				CC9F8750F0A2AA2A79A303C60DE96166 /* Pods-YKSwiftRefresh_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B8ABE32991D6BD398ADC42BAC5A7C2D9 /* Pods-YKSwiftRefresh_Example */ = {
+			isa = PBXGroup;
+			children = (
+				2440DBE5C8333763660516DC8A8E0325 /* Pods-YKSwiftRefresh_Example.modulemap */,
+				346AF72C10B87297DD0E4D0BC6B8DD7B /* Pods-YKSwiftRefresh_Example-acknowledgements.markdown */,
+				511684AE9B085E797F23303286CFC21F /* Pods-YKSwiftRefresh_Example-acknowledgements.plist */,
+				A06F53A17535BC6FABD0652EECE6C41D /* Pods-YKSwiftRefresh_Example-dummy.m */,
+				8B58DFDAB1E583EA312524DA72D54731 /* Pods-YKSwiftRefresh_Example-frameworks.sh */,
+				ECD5AFEB8ED0CDD7444C9BB6E3900906 /* Pods-YKSwiftRefresh_Example-Info.plist */,
+				C38DC73DBBF88249DF2A8F1F5CEAD03C /* Pods-YKSwiftRefresh_Example-umbrella.h */,
+				F05FD6631C926E6F4C19553A0D3A14F0 /* Pods-YKSwiftRefresh_Example.debug.xcconfig */,
+				4BDE8AFC689F5D8FAFBD72E843DBE762 /* Pods-YKSwiftRefresh_Example.release.xcconfig */,
+			);
+			name = "Pods-YKSwiftRefresh_Example";
+			path = "Target Support Files/Pods-YKSwiftRefresh_Example";
+			sourceTree = "<group>";
+		};
+		CC9F8750F0A2AA2A79A303C60DE96166 /* Pods-YKSwiftRefresh_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1E89E6134DB7FDEE3F223219B6DB9E6A /* Pods-YKSwiftRefresh_Tests.modulemap */,
+				00D63E86BC6ADA016A6AAED0C87C530F /* Pods-YKSwiftRefresh_Tests-acknowledgements.markdown */,
+				080A5DCE37D6E600C950CEC54A3B007E /* Pods-YKSwiftRefresh_Tests-acknowledgements.plist */,
+				0506835FEA2BD2D9FD419EC10005C83B /* Pods-YKSwiftRefresh_Tests-dummy.m */,
+				34EEB37519AB0988179F637335BA0925 /* Pods-YKSwiftRefresh_Tests-Info.plist */,
+				0E57E6672E75E6BF4FDF1EC9DD335642 /* Pods-YKSwiftRefresh_Tests-umbrella.h */,
+				393A8A3016BB8BC467951BF66B148044 /* Pods-YKSwiftRefresh_Tests.debug.xcconfig */,
+				586C4DDF49B91A37DC1EBFFB8EFA2706 /* Pods-YKSwiftRefresh_Tests.release.xcconfig */,
+			);
+			name = "Pods-YKSwiftRefresh_Tests";
+			path = "Target Support Files/Pods-YKSwiftRefresh_Tests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				69C4DC43F3EC9FDF0B5269E8CD29785E /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				380BA29923CF853980D45272954E23EC /* Products */,
+				A2EBC17D386CCED3765655AEB4834965 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC92245DB8B1A9FC34592D21A4AB9EB4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C2AEF572E132D7B11F954E3064C5A4DD /* LICENSE */,
+				1AB7DA14319EB856C9BCEF0094CB6DCD /* README.md */,
+				0CCABF77F71A9480AEC5B1C153F81738 /* YKSwiftRefresh.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		78130E5AF6E31BB037D0DF3F6A0C3ACB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A0995381CC4FFE439624110BAE3594 /* Pods-YKSwiftRefresh_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B686E6371D0B6789749B2D3ADF43009C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23044FD8290585C31F00D7D5607B7789 /* Pods-YKSwiftRefresh_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D70576FA4538BC7BCCCEEAF7B80BE115 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE628DCE32B204A59E8F1976E02719CF /* YKSwiftRefresh-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		58CBCC4D9790CD00EB444A141861683B /* Pods-YKSwiftRefresh_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2AEFDC236F8A33A17C4F1A41CD8E4D /* Build configuration list for PBXNativeTarget "Pods-YKSwiftRefresh_Example" */;
+			buildPhases = (
+				78130E5AF6E31BB037D0DF3F6A0C3ACB /* Headers */,
+				0272569D688A49D903443F190B3E5A14 /* Sources */,
+				C344F86A68E061AEFB4652880AA3B58F /* Frameworks */,
+				F380865BC23B91B4E27011A8C25754AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D06C3673DB6323984664F97D9B4BF74E /* PBXTargetDependency */,
+			);
+			name = "Pods-YKSwiftRefresh_Example";
+			productName = "Pods-YKSwiftRefresh_Example";
+			productReference = EB4C54D87046C3DAF11AF682B0D9D03A /* Pods_YKSwiftRefresh_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		59DFDF69196E6580D0BC5AC7CD6EAA4F /* YKSwiftRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14578CF6A61AC20067FF5316F49D3B2F /* Build configuration list for PBXNativeTarget "YKSwiftRefresh" */;
+			buildPhases = (
+				D70576FA4538BC7BCCCEEAF7B80BE115 /* Headers */,
+				F85C4BA371B39284A1D8E33C3623FACB /* Sources */,
+				C7DFA3B91A6A492C8E6EA1504A59FB05 /* Frameworks */,
+				41DFBED73DE7B09F24707A17F678C778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YKSwiftRefresh;
+			productName = YKSwiftRefresh;
+			productReference = 135D32C9CA6DD73E3D6A418AC1EEC385 /* YKSwiftRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A8511FADC29CC2714714C981BDD1733F /* Pods-YKSwiftRefresh_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E06061211EB87C2A17922FCC2947894F /* Build configuration list for PBXNativeTarget "Pods-YKSwiftRefresh_Tests" */;
+			buildPhases = (
+				B686E6371D0B6789749B2D3ADF43009C /* Headers */,
+				B23A1A243C333A200E03166B0EA4E685 /* Sources */,
+				A2DF5CBD20A6EA1D5AC74DDBDDE0DC08 /* Frameworks */,
+				643211539F0D32A28EB53412A145E06B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E64000E0CE5DBE986D8C99764D32B432 /* PBXTargetDependency */,
+			);
+			name = "Pods-YKSwiftRefresh_Tests";
+			productName = "Pods-YKSwiftRefresh_Tests";
+			productReference = EFAB3E6F36B08CCA13AD4EDE152ACD87 /* Pods_YKSwiftRefresh_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 380BA29923CF853980D45272954E23EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58CBCC4D9790CD00EB444A141861683B /* Pods-YKSwiftRefresh_Example */,
+				A8511FADC29CC2714714C981BDD1733F /* Pods-YKSwiftRefresh_Tests */,
+				59DFDF69196E6580D0BC5AC7CD6EAA4F /* YKSwiftRefresh */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41DFBED73DE7B09F24707A17F678C778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		643211539F0D32A28EB53412A145E06B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F380865BC23B91B4E27011A8C25754AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0272569D688A49D903443F190B3E5A14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A26719AC76074B78E483A193E64956 /* Pods-YKSwiftRefresh_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B23A1A243C333A200E03166B0EA4E685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E53E33FF5FE9119996269F24E3FEFD6 /* Pods-YKSwiftRefresh_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85C4BA371B39284A1D8E33C3623FACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCE10B2ED874B6A42B75588DF4B041C /* ReplaceMe.swift in Sources */,
+				A6C19D2CF522F9252DD53B3BF4763058 /* YKSwiftRefresh-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D06C3673DB6323984664F97D9B4BF74E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YKSwiftRefresh;
+			target = 59DFDF69196E6580D0BC5AC7CD6EAA4F /* YKSwiftRefresh */;
+			targetProxy = CBB5CB8127B8FB2784467E7BDDF869B0 /* PBXContainerItemProxy */;
+		};
+		E64000E0CE5DBE986D8C99764D32B432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-YKSwiftRefresh_Example";
+			target = 58CBCC4D9790CD00EB444A141861683B /* Pods-YKSwiftRefresh_Example */;
+			targetProxy = 7773BBAE06226877FC03A00722BAEBB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08B310725C086A2336EB41B60692F13E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BDE8AFC689F5D8FAFBD72E843DBE762 /* Pods-YKSwiftRefresh_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YKSwiftRefresh_Example/Pods-YKSwiftRefresh_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YKSwiftRefresh_Example/Pods-YKSwiftRefresh_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22C439CCAB94035C4201691DDF774925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 393A8A3016BB8BC467951BF66B148044 /* Pods-YKSwiftRefresh_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YKSwiftRefresh_Tests/Pods-YKSwiftRefresh_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YKSwiftRefresh_Tests/Pods-YKSwiftRefresh_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BAE7D907D6CD307073A1DD0B6E7A57CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 309330C73EDA6B6935CA52D24286BD06 /* YKSwiftRefresh.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YKSwiftRefresh/YKSwiftRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YKSwiftRefresh/YKSwiftRefresh-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YKSwiftRefresh/YKSwiftRefresh.modulemap";
+				PRODUCT_MODULE_NAME = YKSwiftRefresh;
+				PRODUCT_NAME = YKSwiftRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CC08D6EDDE6646A5BF4D657F0277CDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99BFCDD6341C77CF3C8260EC61E47CC8 /* YKSwiftRefresh.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YKSwiftRefresh/YKSwiftRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YKSwiftRefresh/YKSwiftRefresh-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YKSwiftRefresh/YKSwiftRefresh.modulemap";
+				PRODUCT_MODULE_NAME = YKSwiftRefresh;
+				PRODUCT_NAME = YKSwiftRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D094741964B15E1D20391B1BCB782960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F05FD6631C926E6F4C19553A0D3A14F0 /* Pods-YKSwiftRefresh_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YKSwiftRefresh_Example/Pods-YKSwiftRefresh_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YKSwiftRefresh_Example/Pods-YKSwiftRefresh_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4CDBC563201E2446904ADC748F03D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 586C4DDF49B91A37DC1EBFFB8EFA2706 /* Pods-YKSwiftRefresh_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YKSwiftRefresh_Tests/Pods-YKSwiftRefresh_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YKSwiftRefresh_Tests/Pods-YKSwiftRefresh_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14578CF6A61AC20067FF5316F49D3B2F /* Build configuration list for PBXNativeTarget "YKSwiftRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE7D907D6CD307073A1DD0B6E7A57CD /* Debug */,
+				CC08D6EDDE6646A5BF4D657F0277CDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E06061211EB87C2A17922FCC2947894F /* Build configuration list for PBXNativeTarget "Pods-YKSwiftRefresh_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C439CCAB94035C4201691DDF774925 /* Debug */,
+				D4CDBC563201E2446904ADC748F03D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2AEFDC236F8A33A17C4F1A41CD8E4D /* Build configuration list for PBXNativeTarget "Pods-YKSwiftRefresh_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D094741964B15E1D20391B1BCB782960 /* Debug */,
+				08B310725C086A2336EB41B60692F13E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

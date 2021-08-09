@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0EEDA460CC766597A0778B23 /* Pods-YKSwiftRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKSwiftRefresh_Example.release.xcconfig"; path = "Target Support Files/Pods-YKSwiftRefresh_Example/Pods-YKSwiftRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
-		31FD4B354F7FEEB84AEC5723 /* YKSwiftRefresh.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YKSwiftRefresh.podspec; path = ../YKSwiftRefresh.podspec; sourceTree = "<group>"; };
+		31FD4B354F7FEEB84AEC5723 /* YKSwiftRefresh.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YKSwiftRefresh.podspec; path = ../YKSwiftRefresh.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		34928FFC22156C64F646F37B /* Pods_YKSwiftRefresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YKSwiftRefresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD56050C7B2B6BDCDE809B /* Pods_YKSwiftRefresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YKSwiftRefresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* YKSwiftRefresh_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKSwiftRefresh_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +43,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		69579B9939D4E8DCA0A4CAE9 /* Pods-YKSwiftRefresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKSwiftRefresh_Tests.debug.xcconfig"; path = "Target Support Files/Pods-YKSwiftRefresh_Tests/Pods-YKSwiftRefresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6C4D273357A4B6979A23E257 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6C4D273357A4B6979A23E257 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BB0C2A2E956E52233D3E6604 /* Pods-YKSwiftRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKSwiftRefresh_Tests.release.xcconfig"; path = "Target Support Files/Pods-YKSwiftRefresh_Tests/Pods-YKSwiftRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C2E505AB87DF5EB0F4A51CE0 /* Pods-YKSwiftRefresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YKSwiftRefresh_Example.debug.xcconfig"; path = "Target Support Files/Pods-YKSwiftRefresh_Example/Pods-YKSwiftRefresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F286D1C144DDED97C6743C87 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F286D1C144DDED97C6743C87 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				69579B9939D4E8DCA0A4CAE9 /* Pods-YKSwiftRefresh_Tests.debug.xcconfig */,
 				BB0C2A2E956E52233D3E6604 /* Pods-YKSwiftRefresh_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

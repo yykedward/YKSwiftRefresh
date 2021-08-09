@@ -1,0 +1,6 @@
+framework module YKSwiftRefresh {
+  umbrella header "YKSwiftRefresh-umbrella.h"
+
+  export *
+  module * { export * }
+}
