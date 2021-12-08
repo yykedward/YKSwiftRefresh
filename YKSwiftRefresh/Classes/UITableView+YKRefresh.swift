@@ -9,6 +9,8 @@ import Foundation
 
 extension UITableView
 {
+    
+    
     public func addEmptyView(handle:()->Void)->Void
     {
         let a = YKSwiftNoDataView.init()
