@@ -93,4 +93,7 @@ extension UIScrollView
         }
     }
     
+    public func headerBeginRefresh() -> Void {
+        es.startPullToRefresh()
+    }
 }
