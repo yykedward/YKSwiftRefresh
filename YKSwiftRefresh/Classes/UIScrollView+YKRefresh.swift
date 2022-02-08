@@ -16,7 +16,7 @@ extension UIScrollView
     public func addRefreshHeader(view:UIView?, viewModel:YKViewModel?, refreshBlock: (()->Void)? = nil) -> Void {
         let refresh:(()->Void) = {
             if let vm = viewModel {
-                vm.page = 0
+                vm.page = 1
             }
             if let block = refreshBlock {
                 block()
