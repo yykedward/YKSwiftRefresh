@@ -19,24 +19,38 @@ public extension UIScrollView
     ///   - viewModel: 刷新修改所用viewModel
     ///   - refreshBlock: 刷新回调
     /// - Returns: 无
-    func addRefreshHeader(view:UIView? = nil, refreshBlock: (()->Void)? = nil) -> Void {
-        weak var weakView = view
+    func addRefreshHeader(refreshBlock: (()->Void)?) -> Void {
         let refresh:(()->Void) = {
             if let block = refreshBlock {
                 block()
             }
         }
         
-        let header = self.es.addPullToRefresh {
+        self.es.addPullToRefresh {
             refresh()
         }
         
+    }
+    
+    func addRefreshHeaderView(callBack:(_ headerBounds:CGRect)->UIView?) {
         
-        if let v = weakView {
-            let headerbgView = UIView.init(frame: header.bounds)
-            headerbgView.addSubview(v)
-            header.addSubview(headerbgView)
+        if let header = self.header {
+            let callBackView = callBack(header.bounds)
+            weak var weakView = callBackView
+            if let toAddView = weakView {
+                let headerbgView = UIView.init(frame: header.bounds)
+                headerbgView.backgroundColor = UIColor.systemBackground
+                headerbgView.addSubview(toAddView)
+                headerbgView.clipsToBounds = true
+                header.addSubview(headerbgView)
+            }
+            
+        }else {
+            #if DEBUG
+            print("\(self)未设置刷新头部刷新view")
+            #endif
         }
+        
     }
     
     /// 添加底部刷新
@@ -45,23 +59,36 @@ public extension UIScrollView
     ///   - viewModel: 刷新修改所用viewModel
     ///   - refreshBlock: 刷新回调
     /// - Returns: 无
-    func addRefreshFooter(view:UIView? = nil, refreshBlock:(()->Void)? = nil) -> Void {
+    func addRefreshFooter(refreshBlock:(()->Void)?) -> Void {
         let refresh:(()->Void) = {
-            
             if let block = refreshBlock {
                 block()
             }
         }
         
-        let footer = self.es.addInfiniteScrolling {
+        self.es.addInfiniteScrolling {
             refresh()
         }
+    }
+    
+    func addRefreshFooterView(callBack:(_ footerBounds:CGRect)->UIView?) {
         
-        if let v = view {
-            let headerbgView = UIView.init(frame: footer.bounds)
-            headerbgView.addSubview(v)
-            footer.addSubview(headerbgView)
+        if let footer = self.footer {
+            weak var view = callBack(footer.bounds)
+            if let toAddView = view {
+                let footerbgView = UIView.init(frame: footer.bounds)
+                footerbgView.backgroundColor = UIColor.systemBackground
+                footerbgView.addSubview(toAddView)
+                footerbgView.clipsToBounds = true
+                footer.addSubview(footerbgView)
+            }
+            
+        }else {
+            #if DEBUG
+            print("\(self)未设置刷新底部刷新view")
+            #endif
         }
+        
     }
     
     
