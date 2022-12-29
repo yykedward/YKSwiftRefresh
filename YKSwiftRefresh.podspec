@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YKSwiftRefresh'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of YKSwiftRefresh.'
 
 # This description is used to generate tags and improve search results.
@@ -32,13 +32,5 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'YKSwiftRefresh/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'YKSwiftRefresh' => ['YKSwiftRefresh/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'ESPullToRefresh'
-  s.dependency 'YKSwiftBaseClass'
 end
