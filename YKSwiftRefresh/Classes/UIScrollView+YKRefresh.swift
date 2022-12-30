@@ -39,7 +39,11 @@ public extension UIScrollView
             weak var weakView = callBackView
             if let toAddView = weakView {
                 let headerbgView = UIView.init(frame: header.bounds)
-                headerbgView.backgroundColor = UIColor.systemBackground
+                if #available(iOS 13.0, *) {
+                    headerbgView.backgroundColor = UIColor.systemBackground
+                } else {
+                    headerbgView.backgroundColor = UIColor.white
+                }
                 headerbgView.addSubview(toAddView)
                 headerbgView.clipsToBounds = true
                 header.addSubview(headerbgView)
@@ -76,7 +80,11 @@ public extension UIScrollView
             weak var view = callBack(footer.bounds)
             if let toAddView = view {
                 let footerbgView = UIView.init(frame: footer.bounds)
-                footerbgView.backgroundColor = UIColor.systemBackground
+                if #available(iOS 13.0, *) {
+                    footerbgView.backgroundColor = UIColor.systemBackground
+                } else {
+                    footerbgView.backgroundColor = UIColor.white
+                }
                 footerbgView.addSubview(toAddView)
                 footerbgView.clipsToBounds = true
                 footer.addSubview(footerbgView)
