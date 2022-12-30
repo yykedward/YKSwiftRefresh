@@ -32,5 +32,5 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'YKSwiftRefresh/Classes/**/*'
   
-  s.dependency 'ESPullToRefresh'
+  s.dependency 'MJRefresh'
 end

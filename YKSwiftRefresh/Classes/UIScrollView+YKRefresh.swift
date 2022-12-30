@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import ESPullToRefresh
+import MJRefresh
 
 //MARK: 添加刷新
 public extension UIScrollView
@@ -26,15 +26,15 @@ public extension UIScrollView
             }
         }
         
-        self.es.addPullToRefresh {
+        self.mj_header = MJRefreshNormalHeader(refreshingBlock: {
             refresh()
-        }
+        })
         
     }
     
     func addRefreshHeaderView(callBack:(_ headerBounds:CGRect)->UIView?) {
         
-        if let header = self.header {
+        if let header = self.mj_header {
             let callBackView = callBack(header.bounds)
             weak var weakView = callBackView
             if let toAddView = weakView {
@@ -65,15 +65,14 @@ public extension UIScrollView
                 block()
             }
         }
-        
-        self.es.addInfiniteScrolling {
+        self.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: {
             refresh()
-        }
+        })
     }
     
     func addRefreshFooterView(callBack:(_ footerBounds:CGRect)->UIView?) {
         
-        if let footer = self.footer {
+        if let footer = self.mj_footer {
             weak var view = callBack(footer.bounds)
             if let toAddView = view {
                 let footerbgView = UIView.init(frame: footer.bounds)
@@ -95,18 +94,21 @@ public extension UIScrollView
     /// 头部结束刷新
     /// - Returns: 无
     func headerEndRefresh() -> Void {
-        es.stopPullToRefresh()
+        self.mj_header?.endRefreshing()
     }
     
     func footerEndRefresh(noMorData:Bool) -> Void {
         if noMorData {
-            es.noticeNoMoreData()
+            self.mj_footer?.endRefreshingWithNoMoreData()
         } else {
-            es.stopLoadingMore()
+            self.mj_footer?.endRefreshing()
         }
     }
     
     func headerBeginRefresh() -> Void {
-        es.startPullToRefresh()
+        DispatchQueue.main.async { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.mj_header?.beginRefreshing()
+        }
     }
 }
