@@ -9,32 +9,25 @@ import Foundation
 import UIKit
 import MJRefresh
 
-//MARK: 添加刷新
-public extension UIScrollView
-{
+
+extension UIScrollView: YKSwiftRefreshHeaderProtocol {}
+
+public extension YKSwiftRefreshHeader where Base: UIScrollView {
     
-    /// 添加头部刷新
-    /// - Parameters:
-    ///   - view: 头部刷新显示的view
-    ///   - viewModel: 刷新修改所用viewModel
-    ///   - refreshBlock: 刷新回调
-    /// - Returns: 无
-    func addRefreshHeader(refreshBlock: (()->Void)?) -> Void {
+    func handler(refreshBlock: (()->Void)?) {
         let refresh:(()->Void) = {
             if let block = refreshBlock {
                 block()
             }
         }
         
-        self.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+        self.base.mj_header = MJRefreshNormalHeader(refreshingBlock: {
             refresh()
         })
-        
     }
     
-    func addRefreshHeaderView(callBack:(_ headerBounds:CGRect)->UIView?) {
-        
-        if let header = self.mj_header {
+    func add(viewWithBoundsCallBack callBack:(_ headerBounds:CGRect)->UIView?) {
+        if let header = self.base.mj_header {
             let callBackView = callBack(header.bounds)
             weak var weakView = callBackView
             if let toAddView = weakView {
@@ -54,29 +47,56 @@ public extension UIScrollView
             print("\(self)未设置刷新头部刷新view")
             #endif
         }
-        
     }
     
-    /// 添加底部刷新
-    /// - Parameters:
-    ///   - view: 底部刷新view
-    ///   - viewModel: 刷新修改所用viewModel
-    ///   - refreshBlock: 刷新回调
-    /// - Returns: 无
-    func addRefreshFooter(refreshBlock:(()->Void)?) -> Void {
+    func refresh(callBack:(()->Void)? = nil) {
+        DispatchQueue.main.async { [weak base] in
+            guard let weakBase = base else { return }
+            
+            let refresh:(()->Void) = {
+                if let block = callBack {
+                    block()
+                }
+            }
+            
+            weakBase.mj_header?.beginRefreshing {
+                refresh()
+            }
+        }
+    }
+    
+    func endRefresh(callBack:(()->Void)? = nil) {
+        
+        let refresh:(()->Void) = {
+            if let block = callBack {
+                block()
+            }
+        }
+        
+        self.base.mj_header?.endRefreshing {
+            refresh()
+        }
+    }
+}
+
+
+extension UIScrollView: YKSwiftRefreshFooterProtocol {}
+
+public extension YKSwiftRefreshFooter where Base: UIScrollView {
+    
+    func handler(refreshBlock: (()->Void)?) {
         let refresh:(()->Void) = {
             if let block = refreshBlock {
                 block()
             }
         }
-        self.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: {
+        self.base.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: {
             refresh()
         })
     }
     
-    func addRefreshFooterView(callBack:(_ footerBounds:CGRect)->UIView?) {
-        
-        if let footer = self.mj_footer {
+    func add(viewWithBoundsCallBack callBack:(_ footerBounds:CGRect)->UIView?) {
+        if let footer = self.base.mj_footer {
             weak var view = callBack(footer.bounds)
             if let toAddView = view {
                 let footerbgView = UIView.init(frame: footer.bounds)
@@ -95,28 +115,40 @@ public extension UIScrollView
             print("\(self)未设置刷新底部刷新view")
             #endif
         }
-        
     }
     
-    
-    /// 头部结束刷新
-    /// - Returns: 无
-    func headerEndRefresh() -> Void {
-        self.mj_header?.endRefreshing()
-    }
-    
-    func footerEndRefresh(noMorData:Bool) -> Void {
-        if noMorData {
-            self.mj_footer?.endRefreshingWithNoMoreData()
-        } else {
-            self.mj_footer?.endRefreshing()
+    func refresh(callBack:(()->Void)? = nil) {
+        DispatchQueue.main.async { [weak base] in
+            guard let weakBase = base else { return }
+            
+            let refresh:(()->Void) = {
+                if let block = callBack {
+                    block()
+                }
+            }
+            
+            weakBase.mj_footer?.beginRefreshing {
+                refresh()
+            }
         }
     }
     
-    func headerBeginRefresh() -> Void {
-        DispatchQueue.main.async { [weak self] in
-            guard let weakSelf = self else { return }
-            weakSelf.mj_header?.beginRefreshing()
+    func endRefresh(noMorData:Bool,callBack:(()->Void)? = nil) {
+        
+        let refresh:(()->Void) = {
+            if let block = callBack {
+                block()
+            }
+        }
+        
+        self.base.mj_footer?.endRefreshingCompletionBlock = {
+            refresh()
+        }
+        
+        if noMorData {
+            self.base.mj_footer?.endRefreshingWithNoMoreData()
+        } else {
+            self.base.mj_footer?.endRefreshing()
         }
     }
 }
