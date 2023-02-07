@@ -21,9 +21,10 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
             }
         }
         
-        self.base.mj_header = MJRefreshNormalHeader(refreshingBlock: {
-            refresh()
-        })
+//        self.base.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+//            refresh()
+//        })
+//        YKSwiftRefreshConfig.share.refreshBlock
     }
     
     func add(viewWithBoundsCallBack callBack:(_ headerBounds:CGRect)->UIView?) {
