@@ -7,8 +7,6 @@
 
 import Foundation
 import UIKit
-import MJRefresh
-
 
 extension UIScrollView: YKSwiftRefreshHeaderProtocol {}
 
@@ -21,14 +19,22 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
             }
         }
         
-//        self.base.mj_header = MJRefreshNormalHeader(refreshingBlock: {
-//            refresh()
-//        })
-//        YKSwiftRefreshConfig.share.refreshBlock
+        if let callBack = YKSwiftRefreshConfig.share.refreshBlock {
+            callBack(.Header,self.base,{
+                refresh()
+            })
+        }else {
+            #if DEBUG
+            print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
+            #endif
+        }
+        
     }
     
     func add(viewWithBoundsCallBack callBack:(_ headerBounds:CGRect)->UIView?) {
-        if let header = self.base.mj_header {
+        
+        if let header = YKSwiftRefreshConfig.share.getRefreshViewBlock?(.Header,self.base) {
+            
             let callBackView = callBack(header.bounds)
             weak var weakView = callBackView
             if let toAddView = weakView {
@@ -45,7 +51,7 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
             
         }else {
             #if DEBUG
-            print("\(self)未设置刷新头部刷新view")
+            print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
             #endif
         }
     }
@@ -60,8 +66,14 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
                 }
             }
             
-            weakBase.mj_header?.beginRefreshing {
-                refresh()
+            if let refreshBlock = YKSwiftRefreshConfig.share.beginRefreshBlock {
+                refreshBlock(.Header,weakBase,{
+                    refresh()
+                })
+            }else {
+                #if DEBUG
+                print("请设置 YKSwiftRefreshConfig.setBeginRefreshBlock")
+                #endif
             }
         }
     }
@@ -74,9 +86,17 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
             }
         }
         
-        self.base.mj_header?.endRefreshing {
-            refresh()
+        if let endRefreshBlock = YKSwiftRefreshConfig.share.endRefreshBlock {
+            endRefreshBlock(.Header,false,self.base,{
+                refresh()
+            })
+        }else {
+            #if DEBUG
+            print("请设置 YKSwiftRefreshConfig.setEndRefreshBlock")
+            #endif
         }
+        
+        
     }
 }
 
@@ -91,13 +111,24 @@ public extension YKSwiftRefreshFooter where Base: UIScrollView {
                 block()
             }
         }
-        self.base.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: {
-            refresh()
-        })
+        
+        if let refreshBlock = YKSwiftRefreshConfig.share.refreshBlock {
+            refreshBlock(.Footer,self.base,{
+                refresh()
+            })
+        }else {
+            #if DEBUG
+            print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
+            #endif
+        }
+        
+        
     }
     
     func add(viewWithBoundsCallBack callBack:(_ footerBounds:CGRect)->UIView?) {
-        if let footer = self.base.mj_footer {
+        
+        if let footer = YKSwiftRefreshConfig.share.getRefreshViewBlock?(.Footer,self.base) {
+            
             weak var view = callBack(footer.bounds)
             if let toAddView = view {
                 let footerbgView = UIView.init(frame: footer.bounds)
@@ -113,7 +144,7 @@ public extension YKSwiftRefreshFooter where Base: UIScrollView {
             
         }else {
             #if DEBUG
-            print("\(self)未设置刷新底部刷新view")
+            print("请设置 YKSwiftRefreshConfig.setGetRefreshViewBlock")
             #endif
         }
     }
@@ -128,9 +159,17 @@ public extension YKSwiftRefreshFooter where Base: UIScrollView {
                 }
             }
             
-            weakBase.mj_footer?.beginRefreshing {
-                refresh()
+            if let refreshBlock = YKSwiftRefreshConfig.share.beginRefreshBlock {
+                refreshBlock(.Footer,weakBase,{
+                    refresh()
+                })
+            }else {
+                #if DEBUG
+                print("请设置 YKSwiftRefreshConfig.setBeginRefreshBlock")
+                #endif
             }
+            
+            
         }
     }
     
@@ -142,14 +181,17 @@ public extension YKSwiftRefreshFooter where Base: UIScrollView {
             }
         }
         
-        self.base.mj_footer?.endRefreshingCompletionBlock = {
-            refresh()
+        if let endRefreshBlock = YKSwiftRefreshConfig.share.endRefreshBlock {
+            endRefreshBlock(.Footer,noMorData,self.base,{
+                refresh()
+            })
+        }else {
+            #if DEBUG
+            print("请设置 YKSwiftRefreshConfig.setEndRefreshBlock")
+            #endif
         }
         
-        if noMorData {
-            self.base.mj_footer?.endRefreshingWithNoMoreData()
-        } else {
-            self.base.mj_footer?.endRefreshing()
-        }
+        
+        
     }
 }

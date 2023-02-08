@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YKSwiftRefresh'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'YKSwiftRefresh'
 
 # This description is used to generate tags and improve search results.
@@ -32,5 +32,4 @@ Pod::Spec.new do |s|
 
   s.source_files = 'YKSwiftRefresh/Classes/**/*'
   
-  s.dependency 'MJRefresh'
 end
