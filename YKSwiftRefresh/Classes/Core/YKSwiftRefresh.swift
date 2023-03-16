@@ -2,15 +2,18 @@
 //  YKRefresh.swift
 //  YKSwiftRefresh
 //
-//  Created by linghit on 2023/1/11.
+//  Created by edward on 2023/1/11.
+//  Copyright © 2023 Edward（本内容遵循MIT协议） . All rights reserved.
 //
 
 import UIKit
+import Foundation
 
 
 //MARK: header
 public struct YKSwiftRefreshHeader<Base> {
     internal let base: Base
+    internal var includeMJRefresh:Bool = false
     internal init(_ base: Base) {
         self.base = base
     }
@@ -18,9 +21,9 @@ public struct YKSwiftRefreshHeader<Base> {
 
 public protocol YKSwiftRefreshHeaderProtocol {}
 
-public extension YKSwiftRefreshHeaderProtocol {
+extension YKSwiftRefreshHeaderProtocol {
     
-    var ykheader: YKSwiftRefreshHeader<Self> {
+    public var ykheader: YKSwiftRefreshHeader<Self> {
         get { return YKSwiftRefreshHeader(self) }
         set {}
     }
@@ -36,9 +39,9 @@ public struct YKSwiftRefreshFooter<Base> {
 
 public protocol YKSwiftRefreshFooterProtocol {}
 
-public extension YKSwiftRefreshFooterProtocol {
+extension YKSwiftRefreshFooterProtocol {
     
-    var ykfooter: YKSwiftRefreshFooter<Self> {
+    public var ykfooter: YKSwiftRefreshFooter<Self> {
         get { return YKSwiftRefreshFooter(self) }
         set {}
     }

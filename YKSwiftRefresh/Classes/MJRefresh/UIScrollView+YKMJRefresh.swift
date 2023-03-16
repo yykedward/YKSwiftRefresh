@@ -18,20 +18,20 @@ public extension YKSwiftMJRefreshHeader where Base: UIScrollView {
             }
         }
         
-        self.mj.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+        self.mj_base.mj_header = MJRefreshNormalHeader(refreshingBlock: {
             refresh()
         })
         
     }
     
     func begin(refreshCallBack: (()->Void)? = nil) {
-        self.mj.mj_header?.beginRefreshing {
+        self.mj_base.mj_header?.beginRefreshing {
             refreshCallBack?()
         }
     }
     
     func end(endCallBack:(()->Void)? = nil) {
-        self.mj.mj_header?.endRefreshing {
+        self.mj_base.mj_header?.endRefreshing {
             endCallBack?()
         }
     }
@@ -47,28 +47,28 @@ public extension YKSwiftMJRefreshFooter where Base: UIScrollView {
             }
         }
         
-        self.mj.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
+        self.mj_base.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
             refresh()
         })
         
     }
     
     func begin(refreshCallBack: (()->Void)? = nil) {
-        self.mj.mj_footer?.beginRefreshing {
+        self.mj_base.mj_footer?.beginRefreshing {
             refreshCallBack?()
         }
     }
     
     func end(isNoMoreData:Bool, endCallBack:(()->Void)? = nil) {
         
-        self.mj.mj_footer?.endRefreshingCompletionBlock = {
+        self.mj_base.mj_footer?.endRefreshingCompletionBlock = {
             endCallBack?()
         }
         
         if isNoMoreData {
-            self.mj.mj_footer?.endRefreshingWithNoMoreData()
+            self.mj_base.mj_footer?.endRefreshingWithNoMoreData()
         }else {
-            self.mj.mj_footer?.endRefreshing()
+            self.mj_base.mj_footer?.endRefreshing()
         }
     }
 }

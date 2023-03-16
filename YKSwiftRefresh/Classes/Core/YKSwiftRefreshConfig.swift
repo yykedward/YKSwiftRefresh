@@ -3,7 +3,7 @@
 //  YKSwiftRefresh
 //
 //  Created by edward on 2023/2/7.
-//  Copyright © 2023 Edward（本内容遵循MIT协议）. . All rights reserved.
+//  Copyright © 2023 Edward（本内容遵循MIT协议） . All rights reserved.
 //
 
 import UIKit
@@ -25,6 +25,12 @@ public class YKSwiftRefreshConfig: NSObject {
     
     internal var getRefreshViewBlock:((_ type:YKSwiftRefreshConfigRefreshMode, _ base:UIScrollView)->UIView?)? = nil
     
+    private override init() {
+        super.init()
+    }
+}
+
+extension YKSwiftRefreshConfig {
     
     public static func setRefreshBlock(block:((_ mode:YKSwiftRefreshConfigRefreshMode, _ base:UIScrollView, _ block:(()->Void)?)->Void)?) {
         YKSwiftRefreshConfig.share.refreshBlock = block

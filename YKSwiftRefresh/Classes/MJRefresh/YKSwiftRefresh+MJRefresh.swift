@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Foundation
 
 //MARK: header
 public struct YKSwiftMJRefreshHeader<Base> {
-    internal let mj: Base
+    internal let mj_base: Base
     internal init(_ base: Base) {
-        self.mj = base
+        self.mj_base = base
     }
 }
 
@@ -26,9 +27,9 @@ public extension YKSwiftRefreshHeaderProtocol {
 
 //MARK: footer
 public struct YKSwiftMJRefreshFooter<Base> {
-    internal let mj: Base
+    internal let mj_base: Base
     internal init(_ base: Base) {
-        self.mj = base
+        self.mj_base = base
     }
 }
 
