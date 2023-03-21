@@ -8,8 +8,6 @@
 
 import UIKit
 
-extension UIScrollView: YKSwiftRefreshHeaderProtocol {}
-
 public extension YKSwiftRefreshHeader where Base: UIScrollView {
     
     func handler(refreshBlock: (()->Void)?) {
@@ -24,19 +22,16 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
                 refresh()
             })
         }else {
-            #if YK_MJREFRESH
-            self.base.mjheader.handler(refreshCallBack: refreshBlock)
-            #else
-#if DEBUG
-print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
-#endif
+            
+            #if DEBUG
+            print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
             #endif
             
         }
         
     }
     
-    func add(viewWithBoundsCallBack callBack:(_ headerBounds:CGRect)->UIView?) {
+    func addView(withBoundsCallBack callBack:(_ headerBounds:CGRect)->UIView?) {
         
         if let header = YKSwiftRefreshConfig.share.getRefreshViewBlock?(.Header,self.base) {
             
@@ -61,7 +56,7 @@ print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
         }
     }
     
-    func refresh(callBack:(()->Void)? = nil) {
+    func beginRefresh(callBack:(()->Void)? = nil) {
         DispatchQueue.main.async { [weak base] in
             guard let weakBase = base else { return }
             
@@ -76,13 +71,8 @@ print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
                     refresh()
                 })
             }else {
-                
-                #if YK_MJREFRESH
-                self.base.mjheader.begin(refreshCallBack: callBack)
-                #else
                 #if DEBUG
                 print("请设置 YKSwiftRefreshConfig.setBeginRefreshBlock")
-                #endif
                 #endif
                 
             }
@@ -102,12 +92,8 @@ print("请设置 YKSwiftRefreshConfig.setRefreshBlock")
                 refresh()
             })
         }else {
-            #if YK_MJREFRESH
-            self.base.mjheader.end(endCallBack: callBack)
-            #else
             #if DEBUG
             print("请设置 YKSwiftRefreshConfig.setEndRefreshBlock")
-            #endif
             #endif
         }
         

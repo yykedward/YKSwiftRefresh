@@ -24,13 +24,35 @@ public extension YKSwiftMJRefreshHeader where Base: UIScrollView {
         
     }
     
-    func begin(refreshCallBack: (()->Void)? = nil) {
+    func addView(withBoundsCallBack callBack:(_ footerBounds:CGRect)->UIView?) {
+        
+        if let header = self.mj_base.mj_header {
+            
+            weak var view = callBack(header.bounds)
+            if let toAddView = view {
+                let headerbgView = UIView.init(frame: header.bounds)
+                if #available(iOS 13.0, *) {
+                    headerbgView.backgroundColor = UIColor.systemBackground
+                } else {
+                    headerbgView.backgroundColor = UIColor.white
+                }
+                headerbgView.addSubview(toAddView)
+                headerbgView.clipsToBounds = true
+                header.addSubview(headerbgView)
+            }
+            
+        }else {
+            
+        }
+    }
+    
+    func beginRefresh(refreshCallBack: (()->Void)? = nil) {
         self.mj_base.mj_header?.beginRefreshing {
             refreshCallBack?()
         }
     }
     
-    func end(endCallBack:(()->Void)? = nil) {
+    func endRefresh(endCallBack:(()->Void)? = nil) {
         self.mj_base.mj_header?.endRefreshing {
             endCallBack?()
         }
@@ -53,13 +75,35 @@ public extension YKSwiftMJRefreshFooter where Base: UIScrollView {
         
     }
     
-    func begin(refreshCallBack: (()->Void)? = nil) {
+    func addView(withBoundsCallBack callBack:(_ footerBounds:CGRect)->UIView?) {
+        
+        if let footer = self.mj_base.mj_footer {
+            
+            weak var view = callBack(footer.bounds)
+            if let toAddView = view {
+                let footerbgView = UIView.init(frame: footer.bounds)
+                if #available(iOS 13.0, *) {
+                    footerbgView.backgroundColor = UIColor.systemBackground
+                } else {
+                    footerbgView.backgroundColor = UIColor.white
+                }
+                footerbgView.addSubview(toAddView)
+                footerbgView.clipsToBounds = true
+                footer.addSubview(footerbgView)
+            }
+            
+        }else {
+            
+        }
+    }
+    
+    func beginRefresh(refreshCallBack: (()->Void)? = nil) {
         self.mj_base.mj_footer?.beginRefreshing {
             refreshCallBack?()
         }
     }
     
-    func end(isNoMoreData:Bool, endCallBack:(()->Void)? = nil) {
+    func endRefresh(isNoMoreData:Bool, endCallBack:(()->Void)? = nil) {
         
         self.mj_base.mj_footer?.endRefreshingCompletionBlock = {
             endCallBack?()

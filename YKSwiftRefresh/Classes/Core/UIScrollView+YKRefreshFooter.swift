@@ -9,8 +9,6 @@
 import UIKit
 
 
-extension UIScrollView: YKSwiftRefreshFooterProtocol {}
-
 public extension YKSwiftRefreshFooter where Base: UIScrollView {
     
     func handler(refreshBlock: (()->Void)?) {
@@ -34,7 +32,7 @@ public extension YKSwiftRefreshFooter where Base: UIScrollView {
         
     }
     
-    func add(viewWithBoundsCallBack callBack:(_ footerBounds:CGRect)->UIView?) {
+    func addView(withBoundsCallBack callBack:(_ footerBounds:CGRect)->UIView?) {
         
         if let footer = YKSwiftRefreshConfig.share.getRefreshViewBlock?(.Footer,self.base) {
             
@@ -58,7 +56,7 @@ public extension YKSwiftRefreshFooter where Base: UIScrollView {
         }
     }
     
-    func refresh(callBack:(()->Void)? = nil) {
+    func beginRefresh(callBack:(()->Void)? = nil) {
         DispatchQueue.main.async { [weak base] in
             guard let weakBase = base else { return }
             

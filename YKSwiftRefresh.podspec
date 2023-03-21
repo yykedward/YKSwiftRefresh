@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
   s.subspec 'MJRefresh' do |ss|
     ss.dependency  'YKSwiftRefresh/Core'
     ss.dependency  'MJRefresh'
+    
     ss.source_files = 'YKSwiftRefresh/Classes/MJRefresh/*'
   end
 end

@@ -21,6 +21,7 @@ public struct YKSwiftRefreshHeader<Base> {
 
 public protocol YKSwiftRefreshHeaderProtocol {}
 
+
 extension YKSwiftRefreshHeaderProtocol {
     
     public var ykheader: YKSwiftRefreshHeader<Self> {
@@ -28,6 +29,8 @@ extension YKSwiftRefreshHeaderProtocol {
         set {}
     }
 }
+
+extension UIScrollView: YKSwiftRefreshHeaderProtocol {}
 
 //MARK: footer
 public struct YKSwiftRefreshFooter<Base> {
@@ -46,4 +49,5 @@ extension YKSwiftRefreshFooterProtocol {
         set {}
     }
 }
+extension UIScrollView: YKSwiftRefreshFooterProtocol {}
 
