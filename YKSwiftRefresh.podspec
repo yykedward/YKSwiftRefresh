@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YKSwiftRefresh'
-  s.version          = '1.4.1'
+  s.version          = '1.4.2'
   s.summary          = 'YKSwiftRefresh'
 
   s.description      = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
     
   s.subspec "Core" do |ss|
-    ss.source_files = 'YKSwiftRefresh/Classes/Core/*'
+    ss.source_files = 'Sources/YKSwiftRefresh/*'
   end
   
 end
