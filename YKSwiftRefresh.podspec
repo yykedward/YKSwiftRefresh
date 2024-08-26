@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YKSwiftRefresh'
-  s.version          = '1.4.0'
+  s.version          = '1.4.1'
   s.summary          = 'YKSwiftRefresh'
 
   s.description      = <<-DESC
@@ -25,10 +25,4 @@ Pod::Spec.new do |s|
     ss.source_files = 'YKSwiftRefresh/Classes/Core/*'
   end
   
-  s.subspec 'MJRefresh' do |ss|
-    ss.dependency  'YKSwiftRefresh/Core'
-    ss.dependency  'MJRefresh'
-    
-    ss.source_files = 'YKSwiftRefresh/Classes/MJRefresh/*'
-  end
 end
