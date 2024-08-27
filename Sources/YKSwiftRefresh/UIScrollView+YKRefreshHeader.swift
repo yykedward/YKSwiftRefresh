@@ -58,7 +58,7 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
         
         if let delegate = YKSwiftRefreshConfig.share.delegate {
             
-            if let view = delegate.refreshView?(type: .Header, base: self.base) {
+            if let view = delegate.refreshView?(mode: .Header, base: self.base) {
                 let callBackView = callBack(view.bounds)
                 weak var weakView = callBackView
                 if let toAddView = weakView {

@@ -52,7 +52,7 @@ public extension YKSwiftRefreshFooter where Base: UIScrollView {
         
         if let delegate = YKSwiftRefreshConfig.share.delegate {
             
-            if let view = delegate.refreshView?(type: .Footer, base: self.base) {
+            if let view = delegate.refreshView?(mode: .Footer, base: self.base) {
                 let callBackView = callBack(view.bounds)
                 weak var weakView = callBackView
                 if let toAddView = weakView {

@@ -21,7 +21,7 @@ import UIKit
     
     func endRefresh(mode:YKSwiftRefreshConfigRefreshMode, scrollView: UIScrollView, isNoMoreData:Bool, callBack:(()->Void)?)
     
-    @objc optional func refreshView(type:YKSwiftRefreshConfigRefreshMode, base:UIScrollView) -> UIView?
+    @objc optional func refreshView(mode:YKSwiftRefreshConfigRefreshMode, base:UIScrollView) -> UIView?
 }
 
 public class YKSwiftRefreshConfig: NSObject {
