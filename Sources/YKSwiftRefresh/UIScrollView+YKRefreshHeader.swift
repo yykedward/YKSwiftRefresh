@@ -35,49 +35,25 @@ extension UIScrollView: YKSwiftRefreshHeaderProtocol {}
 public extension YKSwiftRefreshHeader where Base: UIScrollView {
     
     func handler(refreshBlock: (()->Void)?) {
-        let refresh:(()->Void) = {
-            if let block = refreshBlock {
-                block()
-            }
-        }
-        
-        if let delegate = YKSwiftRefreshConfig.share.delegate {
-            
-            delegate.refreshHandle(mode: .Header, scrollView: base, callBack: refresh)
-        }else {
-            
+        do {
+            try YKRefreshHelper.handleRefresh(mode: .Header, 
+                                            scrollView: base, 
+                                            callBack: refreshBlock)
+        } catch {
             #if DEBUG
-            print("请设置 YKSwiftRefreshConfig.setup")
+            print("Error: \(error)")
             #endif
-            
         }
-        
     }
     
-    func addView(withBoundsCallBack callBack:(_ headerBounds:CGRect)->UIView?) {
-        
-        if let delegate = YKSwiftRefreshConfig.share.delegate {
-            
-            if let view = delegate.refreshView?(mode: .Header, base: self.base) {
-                let callBackView = callBack(view.bounds)
-                weak var weakView = callBackView
-                if let toAddView = weakView {
-                    let headerbgView = UIView.init(frame: view.bounds)
-                    if #available(iOS 13.0, *) {
-                        headerbgView.backgroundColor = UIColor.systemBackground
-                    } else {
-                        headerbgView.backgroundColor = UIColor.white
-                    }
-                    headerbgView.addSubview(toAddView)
-                    headerbgView.clipsToBounds = true
-                    view.addSubview(headerbgView)
-                }
-            }
-            
-        } else {
-            
+    func addView(withBoundsCallBack callBack: @escaping (_ headerBounds:CGRect)->UIView?) {
+        do {
+            try YKRefreshHelper.addCustomView(mode: .Header, 
+                                            base: base, 
+                                            boundsCallback: callBack)
+        } catch {
             #if DEBUG
-            print("请设置 YKSwiftRefreshConfig.setup")
+            print("Error: \(error)")
             #endif
         }
     }
@@ -86,19 +62,12 @@ public extension YKSwiftRefreshHeader where Base: UIScrollView {
         DispatchQueue.main.async { [weak base] in
             guard let weakBase = base else { return }
             
-            let refresh:(()->Void) = {
-                if let block = callBack {
-                    block()
-                }
-            }
-            
             if let delegate = YKSwiftRefreshConfig.share.delegate {
-                delegate.beginRefresh(mode: .Header, scrollView: weakBase, callBack: refresh)
+                delegate.beginRefresh(mode: .Header, scrollView: weakBase, callBack: callBack)
             }else {
                 #if DEBUG
                 print("请设置 YKSwiftRefreshConfig.setup")
                 #endif
-                
             }
         }
     }

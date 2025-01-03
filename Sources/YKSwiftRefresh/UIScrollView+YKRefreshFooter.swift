@@ -30,22 +30,15 @@ extension UIScrollView: YKSwiftRefreshFooterProtocol {}
 public extension YKSwiftRefreshFooter where Base: UIScrollView {
     
     func handler(refreshBlock: (()->Void)?) {
-        let refresh:(()->Void) = {
-            if let block = refreshBlock {
-                block()
-            }
-        }
-        
-        if let delegate = YKSwiftRefreshConfig.share.delegate {
-            delegate.refreshHandle(mode: .Footer, scrollView: base, callBack: refresh)
-        }else {
+        do {
+            try YKRefreshHelper.handleRefresh(mode: .Footer, 
+                                            scrollView: base, 
+                                            callBack: refreshBlock)
+        } catch {
             #if DEBUG
-            print("请设置 YKSwiftRefreshConfig.setup")
+            print("Error: \(error)")
             #endif
-                
         }
-        
-        
     }
     
     func addView(withBoundsCallBack callBack:(_ footerBounds:CGRect)->UIView?) {
